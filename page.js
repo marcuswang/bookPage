@@ -30,7 +30,9 @@ $(document).ready(function (){
                 moveX+= e.originalEvent.targetTouches[0].pageX
                     - pages.lastX;
                 pages.css({
-                    '-wbkit-transform-style':'preserve-3d'
+                    '-wbkit-transform-style':'preserve-3d',
+                    '-webkit-transform' : 'translate3d(' + moveX
+                        + 'px,0px,0)'
                 });
                 pages.lastX = e.originalEvent.targetTouches[0].pageX;
             }
